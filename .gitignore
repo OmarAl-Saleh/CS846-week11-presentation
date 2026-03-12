@@ -1,0 +1,10 @@
+# Ignore optimized solution files from student workspace
+Problem_A/A1/optimized.py
+Problem_A/A2/optimized.py
+
+# Python bytecode cache directories
+__pycache__/
+*.pyc
+
+# Ignore general guidelines document
+guidelines.md
