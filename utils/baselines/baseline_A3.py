@@ -77,19 +77,7 @@ class RouteRequest:
 
 
 class TrafficRoutingSimulator:
-    """
-    Intentionally correct but performance-heavy baseline architecture.
-
-    Hidden bottlenecks:
-    - roads stored as a flat list
-    - road lookup by linear scan
-    - adjacency rebuilt for every route query
-    - shortest path frontier uses linear min-scan instead of heap
-    - route cost repeatedly recomputes dynamic edge weights
-    - route history analytics repeatedly scan all history
-    - no reusable shortest-path caching
-    - batch processing does not group common sources
-    """
+    
 
     def __init__(self, network_data: Dict[str, Any]) -> None:
         self.nodes: List[int] = list(network_data.get("nodes", []))

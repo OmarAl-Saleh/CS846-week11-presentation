@@ -8,4 +8,6 @@ __pycache__/
 *.pyc
 
 # Ignore general guidelines document
-guidelines.md
+Guidelines_omar.md
+evaluaiton_omar.md
+Problems_omar.md
