@@ -1,0 +1,33 @@
+# Digit Sum Range Finder
+#
+# Given 1 million random integers between 1 and 100,000, find the difference
+# between the smallest and largest numbers whose digits sum to 30.
+# Optimize for performance.
+
+import random
+import time
+
+random.seed(42)
+numbers = [random.randint(1, 100000) for _ in range(1_000_000)]
+
+
+def digit_sum(n):
+    return sum(int(digit) for digit in str(n))
+
+
+def find_difference(numbers):
+    min_num = float('inf')
+    max_num = float('-inf')
+    for num in numbers:
+        if digit_sum(num) == 30:
+            min_num = min(min_num, num)
+            max_num = max(max_num, num)
+    return max_num - min_num
+
+
+start = time.perf_counter()
+result = find_difference(numbers)
+elapsed = time.perf_counter() - start
+
+print(f"Result: {result}")
+print(f"Time: {elapsed:.3f}s")
