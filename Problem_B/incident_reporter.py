@@ -407,6 +407,7 @@ def main() -> None:
     run_tests()
     t1 = time.perf_counter()
     print(f"All tests passed ({(t1 - t0) * 1000.0:.1f} ms)")
+    print(f"Running benchmark...")
 
     run_benchmark()
 
