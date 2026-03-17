@@ -17,7 +17,7 @@ if r1.stderr:
 print("=" * 50)
 print("OPTIMAL SOLUTION")
 print("=" * 50)
-r2 = subprocess.run([sys.executable, "helpers/optimal_solution.pyc"], capture_output=True, text=True)
+r2 = subprocess.run([sys.executable, "helpers/optimal_solution.py"], capture_output=True, text=True)
 print(r2.stdout)
 if r2.stderr:
     print(r2.stderr)
