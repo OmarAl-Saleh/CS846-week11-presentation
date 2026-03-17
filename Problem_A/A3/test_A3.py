@@ -12,7 +12,7 @@ from utils.baselines.baseline_A3 import (
     baseline_delivery_schedule_cost,
 )
 
-from Problem_A.A3.traffic_routing_simulator import (
+from Problem_A.A3.optimized import (
     find_route,
     process_route_batch,
     top_congested_roads,
